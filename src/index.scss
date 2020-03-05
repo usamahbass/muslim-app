@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}

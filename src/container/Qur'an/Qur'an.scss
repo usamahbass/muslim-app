@@ -1,0 +1,80 @@
+main {
+  .box_surah {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-shrink: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    #empty_surah {
+      display: none;
+    }
+  }
+}
+
+article {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  text-align: center;
+  display: none;
+  height: auto !important;
+
+  .flex_ayat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .nama_surah,
+    .arti_surah {
+      margin-left: 1.5rem;
+      font-family: "Amiri";
+      color: #000;
+      font-size: 2rem;
+      font-weight: 200;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+$breakpoint-mobile: 600px;
+
+@media (max-width: $breakpoint-mobile) {
+  main {
+    .box_surah {
+      display: block;
+      position: relative;
+      bottom: 90px;
+    }
+  }
+  article {
+    margin-left: 0;
+    margin-right: 1.5rem;
+    .flex_ayat {
+      position: relative;
+      bottom: 75px;
+      flex-direction: column;
+
+      .nama_surah {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+    .box_ayat {
+      position: relative;
+      bottom: 100px;
+    }
+    audio {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      outline: none;
+      bottom: 100px;
+      margin-bottom: 100px;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}

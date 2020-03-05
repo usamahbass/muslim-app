@@ -1,0 +1,48 @@
+.box_ayat_list {
+  display: block;
+  margin-top: 2em;
+  padding-bottom: 1em;
+  border-top: 1px solid rgb(214, 215, 217);
+
+  .ayat_nomor {
+    display: block;
+    position: relative;
+    margin-right: auto;
+    height: 2rem;
+    width: 2rem;
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .ayat_arabic {
+    font-family: "Amiri";
+    margin-top: 0.5em;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.7em;
+    line-height: 2.4;
+    font-style: normal;
+  }
+
+  .ayat_latin {
+    font-weight: 400;
+    padding: 1em 0;
+  }
+
+  .ayat_id {
+    margin-top: 1rem;
+    display: block;
+  }
+}
+
+$breakpoint-mobile-dekstop: 600px;
+
+@media (max-width: $breakpoint-mobile-dekstop) {
+  .box_ayat_list {
+    .ayat_nomor {
+      top: 0;
+    }
+  }
+}

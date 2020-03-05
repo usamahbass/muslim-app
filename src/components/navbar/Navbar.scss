@@ -1,0 +1,137 @@
+$breakpoint-mobile: 600px;
+
+.navbar_app {
+  position: fixed;
+  z-index: 999;
+  background-color: #000;
+  transition: width 200ms ease;
+
+  &:hover {
+    width: 16rem;
+    .navbar_text {
+      display: block;
+      margin: 0 auto;
+    }
+    .navbar_logo {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .navbar_card {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar_logo {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+  }
+
+  .navbar_logo i {
+    transform: rotate(0deg);
+    transition: 200ms ease;
+  }
+
+  .navbar_list {
+    cursor: pointer;
+    width: 100%;
+    &:last-child {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .navbar_link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.9);
+    transition: width 200ms ease;
+  }
+
+  .navbar_link:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  .navbar_link i {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .navbar_text {
+    margin-left: 1rem;
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .navbar_app {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    &:hover {
+      width: 16rem;
+      .navbar_text {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .navbar_app {
+    bottom: 0;
+    z-index: 999;
+    height: 5rem;
+    width: 100vw;
+    .navbar_card {
+      flex-direction: row;
+      margin-top: 0;
+    }
+    .navbar_logo {
+      display: none;
+    }
+
+    .navbar_list {
+      &:last-child {
+        position: relative;
+      }
+    }
+
+    .navbar_link {
+      justify-content: center;
+    }
+
+    .navbar_link i {
+      top: 1rem;
+      left: 1.2rem;
+      position: absolute;
+      font-size: 1.5rem;
+    }
+
+    .navbar_text {
+      position: relative;
+      top: 1.5rem;
+      text-align: center;
+      overflow: hidden;
+      width: 25vw;
+      margin-left: auto;
+      display: block;
+    }
+    &:hover {
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+}
